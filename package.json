@@ -1,0 +1,23 @@
+{
+  "name": "juadk-qa-tests",
+  "version": "1.0.0",
+  "description": "Common Cypress Library",
+  "main": "index.ts",
+  "types:": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juadk/npm-test.git"
+  },
+  "author": "juadk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juadk/npm-test/issues"
+  },
+  "homepage": "https://github.com/juadk/npm-test#readme",
+  "dependencies": {
+    "juadk-qa-tests": "file:juadk-qa-tests-1.0.0.tgz"
+  }
+}
