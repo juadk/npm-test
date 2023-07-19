@@ -1,0 +1,50 @@
+name: Publish Package to npmjs
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to publish [<newversion> | major | minor | patch ]'
+        required: true
+        default: 'patch'
+
+#permissions:
+#  pull-requests: write
+#  contents: write
+
+jobs:
+  publish-to-npmjs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Clean installation
+        run: npm ci
+      - name: Create new version
+        run: npm version ${{ github.event.inputs.version }} 
+#      - name: Publish to npmjs
+#        run: npm publish --access public
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Commit the new version
+        run:  |
+          git push origin main
+          git push --tags
+#      - name: Create Pull Request
+#        uses: peter-evans/create-pull-request@v5
+#        with:
+#          commit-message: Auto Pull Request
+#          title: Release new version
+#          body: Auto-created Pull Request
+#          branch: new-release
+#          delete-branch: true
+#
