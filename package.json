@@ -1,6 +1,6 @@
 {
   "name": "juadk-qa-tests",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Common Cypress Library",
   "main": "index.ts",
   "types:": "index.d.ts",
@@ -9,15 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juadk/npm-test.git"
+    "url": "git+https://github.com/rancher-sandbox/rancher-ecp-qa.git"
   },
   "author": "juadk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/juadk/npm-test/issues"
+    "url": "https://github.com/rancher-sandbox/rancher-ecp-qa/issues"
   },
-  "homepage": "https://github.com/juadk/npm-test#readme",
-  "dependencies": {
-    "juadk-qa-tests": "file:juadk-qa-tests-1.0.0.tgz"
-  }
+  "homepage": "https://github.com/rancher-sandbox/rancher-ecp-qa#readme"
 }
