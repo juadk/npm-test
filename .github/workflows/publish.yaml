@@ -7,10 +7,6 @@ on:
         required: true
         default: 'patch'
 
-#permissions:
-#  pull-requests: write
-#  contents: write
-
 jobs:
   publish-to-npmjs:
     runs-on: ubuntu-latest
@@ -38,12 +34,3 @@ jobs:
         run:  |
           git push origin main
           git push --tags
-#      - name: Create Pull Request
-#        uses: peter-evans/create-pull-request@v5
-#        with:
-#          commit-message: Auto Pull Request
-#          title: Release new version
-#          body: Auto-created Pull Request
-#          branch: new-release
-#          delete-branch: true
-#

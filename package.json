@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rancher-sandbox/rancher-ecp-qa/issues"
   },
-  "homepage": "https://github.com/rancher-sandbox/rancher-ecp-qa#readme"
+  "homepage": "https://github.com/rancher-sandbox/rancher-ecp-qa#readme",
+  "dependencies": {
+    "cypress-qase-reporter": "1.4.1"
+  }
 }
