@@ -17,4 +17,4 @@ jobs:
           SPEC: tests/cypress/e2e/unit-tests.spec.ts
           CYPRESS_DOCKER: 'cypress/included:10.9.0'
         run: 
-          ./tests/scripts/start-cypress-tests
+          ./scripts/start-cypress-tests
