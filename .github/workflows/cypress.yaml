@@ -11,7 +11,10 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Clean installation
+      - name: Start Rancher
+        run: |
+          ./scripts/start-rancher
+      - name: Execute Cypress tests 
         env:
           CI: true
           SPEC: tests/cypress/e2e/unit-tests.spec.ts
